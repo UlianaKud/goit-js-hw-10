@@ -12,9 +12,8 @@ const DEBOUNCE_DELAY = 300;
 
 let handleSearchName = () => {
   let inputName = input.value;
-  console.log(inputName.trim());
-  if (inputName.trim() === '') {
-    return;
+  if (inputName === '') {
+    countryList.innerHTML = '';
   }
   if (inputName) {
     const countryName = inputName.trim();
@@ -34,8 +33,6 @@ let handleSearchName = () => {
         countryList.innerHTML = '';
         Notiflix.Notify.failure('Oops, there is no country with that name');
       });
-  } else {
-    countryList.innerHTML = '';
   }
 };
 
@@ -78,4 +75,3 @@ function renderNamesList(names) {
     .join('');
   countryList.innerHTML = markup;
 }
-
