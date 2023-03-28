@@ -1,5 +1,5 @@
-import './css/styles.css';
-import './css/styles-js.css';
+import '../css/styles.css';
+import '../css/styles-js.css';
 import Notiflix from 'notiflix';
 const debounce = require('lodash.debounce');
 
