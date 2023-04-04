@@ -12,8 +12,10 @@ const DEBOUNCE_DELAY = 300;
 
 let handleSearchName = () => {
   let inputName = input.value;
-  if (inputName === '') {
+  if (!inputName?.trim()) {
     countryList.innerHTML = '';
+    Notiflix.Notify.failure('Oops, request is empty');
+    return;
   }
   if (inputName) {
     const countryName = inputName.trim();
